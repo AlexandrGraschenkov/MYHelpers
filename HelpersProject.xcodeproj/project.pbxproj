@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A8013C5419AB172C002F45E4 /* MYMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYMacros.h; sourceTree = "<group>"; };
 		A810359819A777D300D9CE38 /* HelpersProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpersProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A810359B19A777D300D9CE38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A810359D19A777D300D9CE38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +55,6 @@
 		A81035C219A777D400D9CE38 /* HelpersProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelpersProjectTests-Info.plist"; sourceTree = "<group>"; };
 		A81035C419A777D400D9CE38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A81035C619A777D400D9CE38 /* HelpersProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpersProjectTests.m; sourceTree = "<group>"; };
-		A81035D119A7788700D9CE38 /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		A81035D219A7788700D9CE38 /* MYHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYHelpers.h; sourceTree = "<group>"; };
 		A81035D319A7788700D9CE38 /* MYHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 		A81035D019A7788700D9CE38 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A81035D119A7788700D9CE38 /* Macros.h */,
+				A8013C5419AB172C002F45E4 /* MYMacros.h */,
 				A81035D219A7788700D9CE38 /* MYHelpers.h */,
 				A81035D319A7788700D9CE38 /* MYHelpers.m */,
 			);

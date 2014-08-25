@@ -5,27 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4BDA1B93-2EE5-43FA-8FA5-2518248B6F34</string>
+	<string>42C50F9B-C0F0-4855-878E-5892BC1EAD5E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HelpersProject</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>06692345-3326-44CD-9954-6E40A7F5BCBE</key>
 		<string>https://bitbucket.org/sharrikk/helpers.git</string>
+		<key>112736B6-99BD-46D7-995A-48313C1665A4</key>
+		<string>https://github.com/AlexandrGraschenkov/MYHelpers.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HelpersProject/HelpersProject.xcodeproj/project.xcworkspace</string>
+	<string>HelpersProject.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>06692345-3326-44CD-9954-6E40A7F5BCBE</key>
-		<string>../../..</string>
+		<string>../../../Helpers</string>
+		<key>112736B6-99BD-46D7-995A-48313C1665A4</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/sharrikk/helpers.git</string>
+	<string>https://github.com/AlexandrGraschenkov/MYHelpers.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>06692345-3326-44CD-9954-6E40A7F5BCBE</string>
+	<string>112736B6-99BD-46D7-995A-48313C1665A4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>06692345-3326-44CD-9954-6E40A7F5BCBE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Helpers</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>112736B6-99BD-46D7-995A-48313C1665A4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MYHelpers</string>
 		</dict>
 	</array>
 </dict>
