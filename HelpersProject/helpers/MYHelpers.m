@@ -151,6 +151,33 @@
     CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
+
++ (UIColor *)colorWithHexValue:(uint)hexValue andAlpha:(float)alpha
+{
+    return [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0
+                           green:((float)((hexValue & 0xFF00) >> 8))/255.0
+                            blue:((float)(hexValue & 0xFF))/255.0
+                           alpha:alpha];
+}
+
++ (UIColor *)colorWithHexString:(NSString *)hexString
+{
+    return [UIColor colorWithHexString:hexString andAlpha:1];
+}
+
++ (UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(float)alpha
+{
+    UIColor *col;
+    hexString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@"0x"];
+    uint hexValue;
+    if ([[NSScanner scannerWithString:hexString] scanHexInt:&hexValue])
+        col = [self colorWithHexValue:hexValue andAlpha:alpha];
+    else
+        // invalid hex string
+        col = [self blackColor];
+    return col;
+}
+
 @end
 
 #pragma mark - UIScrollView+Utls
