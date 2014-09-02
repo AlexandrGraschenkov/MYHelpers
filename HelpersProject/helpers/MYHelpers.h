@@ -41,6 +41,9 @@
 
 @interface UIColor (Utils)
 + (UIColor *)randomColor;
++ (UIColor *)colorWithHexValue:(uint)hexValue andAlpha:(float)alpha;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(float)alpha;
 @end
 
 #pragma mark - UIButton+Utls
