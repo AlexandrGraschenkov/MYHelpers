@@ -43,6 +43,11 @@
 + (UIColor *)randomColor;
 @end
 
+#pragma mark - UIButton+Utls
+@interface UIButton (UItils)
+@property (nonatomic, strong) NSString *title;
+@end
+
 #pragma mark - UIScrollView+Utls
 
 @interface UIScrollView (Utils)
@@ -66,6 +71,7 @@
 - (id)objectAtIndexOrNil:(NSUInteger)index;
 - (NSArray *)containNotObjects:(NSArray *)array;
 - (NSArray *)shuffle;
+- (NSArray *)uniqueValues;
 - (NSString*)JSONString;
 - (NSData*)JSONData;
 @end

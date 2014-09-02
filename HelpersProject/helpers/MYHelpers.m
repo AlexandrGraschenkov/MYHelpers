@@ -153,6 +153,20 @@
 }
 @end
 
+
+#pragma mark - UIButton+Utls
+@implementation UIButton (UItils)
+- (void)setTitle:(NSString *)title
+{
+    [self setTitle:title forState:UIControlStateNormal];
+}
+
+- (NSString *)title
+{
+    return [self titleForState:UIControlStateNormal];
+}
+@end
+
 #pragma mark - UIScrollView+Utls
 
 @implementation UIScrollView (Utils)
@@ -241,6 +255,11 @@
         [array exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
     }
     return [NSArray arrayWithArray:array];
+}
+
+- (NSArray *)uniqueValues
+{
+    return [self valueForKeyPath:@"@distinctUnionOfObjects.self"];
 }
 
 - (NSString*)JSONString {
