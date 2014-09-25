@@ -83,6 +83,7 @@
 - (NSString *)lightURLEncodeString;
 + (BOOL)emailValidate:(NSString *)email;
 - (CGSize)sizeForStringWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
+- (id)JSON;
 @end
 
 #pragma mark - NSObject+Utils
