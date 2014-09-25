@@ -355,6 +355,12 @@
 #endif
 }
 
+- (id)JSON
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+}
+
 @end
 
 #pragma mark - NSObject+Utils

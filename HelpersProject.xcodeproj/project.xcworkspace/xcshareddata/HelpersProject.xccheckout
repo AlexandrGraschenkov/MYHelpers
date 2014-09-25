@@ -12,7 +12,7 @@
 	<dict>
 		<key>06692345-3326-44CD-9954-6E40A7F5BCBE</key>
 		<string>https://bitbucket.org/sharrikk/helpers.git</string>
-		<key>112736B6-99BD-46D7-995A-48313C1665A4</key>
+		<key>45E1DB4BA5AE1E9B0CE6F747F556A0B4F5F2D137</key>
 		<string>https://github.com/AlexandrGraschenkov/MYHelpers.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -21,15 +21,15 @@
 	<dict>
 		<key>06692345-3326-44CD-9954-6E40A7F5BCBE</key>
 		<string>../../../Helpers</string>
-		<key>112736B6-99BD-46D7-995A-48313C1665A4</key>
+		<key>45E1DB4BA5AE1E9B0CE6F747F556A0B4F5F2D137</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AlexandrGraschenkov/MYHelpers.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>112736B6-99BD-46D7-995A-48313C1665A4</string>
+	<string>45E1DB4BA5AE1E9B0CE6F747F556A0B4F5F2D137</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>112736B6-99BD-46D7-995A-48313C1665A4</string>
+			<string>45E1DB4BA5AE1E9B0CE6F747F556A0B4F5F2D137</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MYHelpers</string>
 		</dict>
