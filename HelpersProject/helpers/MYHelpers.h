@@ -35,6 +35,11 @@
 
 @interface UIImage (Utils)
 + (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)colorizeImageWithColor:(UIColor *)color;
+/// @return `UIImage` with size passed in
+- (UIImage *)aspectFillImageWithSize:(CGSize)size;
+- (UIImage *)aspectFitImageWithSize:(CGSize)size;
+- (BOOL)hasAlpha;
 @end
 
 #pragma mark - UIColor+Utils
@@ -82,6 +87,7 @@
 #pragma mark - NSString+Utils
 
 @interface NSString (Utils)
+- (NSString *)trim; // trim whitespace characters with new line
 - (NSString *):(NSString *)appendString;
 - (NSURL *)toURL;
 - (NSString *)URLEncodedString;
@@ -89,6 +95,7 @@
 - (NSString *)lightURLEncodeString;
 + (BOOL)emailValidate:(NSString *)email;
 - (CGSize)sizeForStringWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
+- (id)JSON;
 @end
 
 #pragma mark - NSObject+Utils

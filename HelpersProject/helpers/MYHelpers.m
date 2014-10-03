@@ -124,7 +124,6 @@
 @end
 
 #pragma mark - UIImage+Utils
-
 @implementation UIImage (Utils)
 + (UIImage *)imageWithColor:(UIColor *)color
 {
@@ -139,6 +138,64 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+- (UIImage *)colorizeImageWithColor:(UIColor *)color
+{
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect area = CGRectMake(0, 0, self.size.width, self.size.height);
+    
+    CGContextScaleCTM(context, 1, -1);
+    CGContextTranslateCTM(context, 0, -area.size.height);
+    CGContextSaveGState(context);
+    
+    CGContextClipToMask(context, area, self.CGImage);
+    [color set];
+    CGContextFillRect(context, area);
+    
+    CGContextRestoreGState(context);
+    
+    CGContextSetBlendMode(context, kCGBlendModeMultiply);
+    CGContextDrawImage(context, area, self.CGImage);
+    
+    UIImage *colorizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return colorizedImage;
+}
+
+- (UIImage *)aspectFillImageWithSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    
+    float scale = fmaxf(size.width / self.size.width, size.height / self.size.height);
+    CGSize newSize = CGSizeMake(ceilf(self.size.width * scale), ceilf(self.size.height * scale));
+    CGRect frame = CGRectMake(ceilf((size.width - newSize.width) / 2.0),
+                              ceilf((size.height - newSize.height) / 2.0),
+                              newSize.width,
+                              newSize.height);
+    [self drawInRect:frame];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+- (UIImage *)aspectFitImageWithSize:(CGSize)size
+{
+    float scale = fminf(size.width / self.size.width, size.height / self.size.height);
+    CGSize targetSize = CGSizeMake(ceilf(self.size.width * scale), ceilf(self.size.height * scale));
+    return [self aspectFillImageWithSize:targetSize];
+}
+- (BOOL)hasAlpha
+{
+    CGImageAlphaInfo alpha = CGImageGetAlphaInfo(self.CGImage);
+    return (alpha == kCGImageAlphaFirst ||
+            alpha == kCGImageAlphaLast ||
+            alpha == kCGImageAlphaPremultipliedFirst ||
+            alpha == kCGImageAlphaPremultipliedLast);
 }
 @end
 
@@ -302,9 +359,15 @@
 
 @implementation NSString (Utils)
 
+- (NSString *)trim
+{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 - (NSString *):(NSString *)appendString {
     return [self stringByAppendingString:appendString];
 }
+
 - (NSURL*)toURL {
     return [NSURL URLWithString:self];
 }
@@ -353,6 +416,13 @@
                    constrainedToSize:CGSizeMake(size.width, MAXFLOAT)];
     return CGSizeMake(size.width, ceilf(contentSize.height));
 #endif
+}
+
+
+- (id)JSON
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 }
 
 @end
