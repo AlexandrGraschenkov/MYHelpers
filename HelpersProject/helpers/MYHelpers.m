@@ -283,7 +283,7 @@
 
 @implementation NSString (Utils)
 
-- (NSString *):(NSString *)appendString {
+- (NSString *)append:(NSString *)appendString {
     return [self stringByAppendingString:appendString];
 }
 - (NSURL*)toURL {

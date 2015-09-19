@@ -76,7 +76,7 @@
 #pragma mark - NSString+Utils
 
 @interface NSString (Utils)
-- (NSString *):(NSString *)appendString;
+- (NSString *)append:(NSString *)appendString;
 - (NSURL *)toURL;
 - (NSString *)URLEncodedString;
 - (NSString *)URLDecodedString;
