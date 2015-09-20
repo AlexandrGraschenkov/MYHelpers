@@ -364,7 +364,7 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
-- (NSString *):(NSString *)appendString {
+- (NSString *)append:(NSString *)appendString {
     return [self stringByAppendingString:appendString];
 }
 
@@ -417,7 +417,6 @@
     return CGSizeMake(size.width, ceilf(contentSize.height));
 #endif
 }
-
 
 - (id)JSON
 {

@@ -87,8 +87,8 @@
 #pragma mark - NSString+Utils
 
 @interface NSString (Utils)
-- (NSString *)trim; // trim whitespace characters with new line
-- (NSString *):(NSString *)appendString;
+- (NSString *)trim; // trim whitespace characters and \n character
+- (NSString *)append:(NSString *)appendString;
 - (NSURL *)toURL;
 - (NSString *)URLEncodedString;
 - (NSString *)URLDecodedString;
