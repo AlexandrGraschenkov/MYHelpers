@@ -9,6 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "MYMacros.h"
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    
+    void dispatch_async_main(dispatch_block_t block);
+    
+#ifdef __cplusplus
+}
+#endif
+
+
 #pragma mark - UIView+Utils
 
 @interface UIView (Utils)
@@ -49,6 +61,7 @@
 + (UIColor *)colorWithHexValue:(uint)hexValue andAlpha:(float)alpha;
 + (UIColor *)colorWithHexString:(NSString *)hexString;
 + (UIColor *)colorWithHexString:(NSString *)hexString andAlpha:(float)alpha;
+- (UIColor *)lighterColor:(CGFloat)ligther;
 @end
 
 #pragma mark - UIButton+Utls

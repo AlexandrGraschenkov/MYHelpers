@@ -8,15 +8,15 @@
 
 #import "MYHelpers.h"
 
-@interface UIGradientView : UIView
-@property (nonatomic,readonly,retain) CAGradientLayer  *layer;
-@end
-
-@implementation UIGradientView
-+ (Class)layerClass {
-    return [CAGradientLayer class];
+void dispatch_async_main(dispatch_block_t block) {
+    if ([NSThread isMainThread]) {
+        block();
+    } else {
+        dispatch_async(dispatch_get_main_queue(), block);
+    }
 }
-@end
+
+
 
 @implementation UIView (Utils)
 
@@ -235,6 +235,17 @@
     return col;
 }
 
+- (UIColor *)lighterColor:(CGFloat)ligther {
+    CGFloat h,s,b,a;
+    if ([self getHue:&h saturation:&s brightness:&b alpha:&a]) {
+        return [UIColor colorWithHue:h
+                          saturation:s
+                          brightness:MIN(1, MAX(s + ligther, 0.0))
+                               alpha:a];
+    }
+    return nil;
+}
+
 @end
 
 
@@ -335,7 +346,7 @@
     NSUInteger count = [array count];
     for (NSUInteger i = 0; i < count; ++i) {
         NSInteger remainingCount = count - i;
-        NSInteger exchangeIndex = i + arc4random_uniform(remainingCount);
+        NSInteger exchangeIndex = i + arc4random_uniform((u_int32_t)remainingCount);
         [array exchangeObjectAtIndex:i withObjectAtIndex:exchangeIndex];
     }
     return [NSArray arrayWithArray:array];
