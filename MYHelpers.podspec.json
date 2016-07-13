@@ -1,6 +1,6 @@
 {
   "name": "MYHelpers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "Powerfull pie layer for creating your own pie view",
   "homepage": "https://github.com/AlexandrGraschenkov/MYHelpers",
   "license": "MIT",
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/AlexandrGraschenkov/MYHelpers.git",
-    "tag": "1.0.2"
+    "tag": "1.0.3"
   },
   "source_files": [
   "HelpersProject/helpers/*.{h,m}"
