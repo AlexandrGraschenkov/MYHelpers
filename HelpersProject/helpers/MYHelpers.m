@@ -240,7 +240,7 @@ void dispatch_async_main(dispatch_block_t block) {
     if ([self getHue:&h saturation:&s brightness:&b alpha:&a]) {
         return [UIColor colorWithHue:h
                           saturation:s
-                          brightness:MIN(1, MAX(s + ligther, 0.0))
+                          brightness:MIN(1, MAX(b + ligther, 0.0))
                                alpha:a];
     }
     return nil;
